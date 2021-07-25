@@ -20,7 +20,7 @@ Once inside the todolist-backend directory, run in the following order:
 5. Optional: to view and open the JSON data, open http://localhost:3000/api/v1/lists in the browser. 
 
 # Next Step: todolist-frontend
-Click here to be redirected to the todolist-frontend repository and follow the steps to run the app.
+Click [here](https://github.com/pjfooeve09/todolist-frontend/blob/main/README.md) to be redirected to the todolist-frontend repository and follow the steps to run the app.
 
 
 
