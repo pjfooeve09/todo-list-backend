@@ -12,7 +12,9 @@ class Api::V1::ItemsController < ApplicationController
     end
 
     def create
-        list = List.find_by(params[:id])
+        list = List.find(params[:list_id])
+        # find by list_id
+        # will not have an id until it saves
         item = list.items.build(item_params)
         render json: item.save ? ItemSerializer.new(item) : {message: item.errors.messages[0]}
     end
@@ -34,7 +36,7 @@ class Api::V1::ItemsController < ApplicationController
     private
 
     def item_params
-        params.require(:item).permit(:id, :content, :list_id)
+        params.require(:item).permit(:id, :content, :parent, :list_id)
     end
 
     def set_item

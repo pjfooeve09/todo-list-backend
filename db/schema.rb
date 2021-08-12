@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2021_01_03_153036) do
 
   create_table "items", force: :cascade do |t|
     t.string "content"
+    t.string "parent"
     t.bigint "list_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
